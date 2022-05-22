@@ -4,9 +4,12 @@
 To develop a code to solve eight queens problem using the hill-climbing algorithm.
 
 ## THEORY
-Explain the problem statement
+Hill climbing algorithm is a local search algorithm which continuously moves in the direction of increasing elevation/value to find the peak of the mountain or best solution to the problem. It terminates when it reaches a peak value where no neighbor has a higher value.Itis a technique which is used for optimizing the mathematical problems. One of the widely discussed examples of Hill climbing algorithm is Traveling-salesman Problem in which we need to minimize the distance traveled by the salesman.It is also called greedy local search as it only looks to its good immediate neighbor state and not beyond that.Hill Climbing is mostly used when a good heuristic is available.
 
 ## DESIGN STEPS
+
+A node of hill climbing algorithm has two components which are state and value.
+
  
 ### STEP 1:
 Import the necessary libraries
@@ -155,17 +158,49 @@ def hill_climbing(problem,iterations = 10000):
                 return current 
                 
         i += 1        
-    return current    
+    return current 
+nq1=NQueensProblem(8)    
+plot_NQueens(nq1.initial)
+n=[8,16,32,64]
+time=[]
+case=1
+for i in n:
+    nq1=NQueensProblem(i)
+    n1 = Node(state=nq1.initial)
+    num_conflicts = nq1.h(n1)
+    print("Case {0}:\tN-value:{1}".format(case,i))
+    print("Initial Conflicts = {0}".format(num_conflicts))
+    import time
+    start=time.time()
+    sol1=hill_climbing(nq1,iterations=20000)
+    end=time.time()
+    print(sol1)
+    sol1.state
+    num_conflicts = nq1.h(sol1)
+    print("Final Conflicts = {0}".format(num_conflicts))
+    print("The total time required for 20000 iterations is {0:.4f} seconds\n\n".format(end-start))
+    
+    case+=1
+    
 
 
 ```
 ## OUTPUT:
+![Screenshot (221)](https://user-images.githubusercontent.com/75243072/169692094-d857a74d-dfb8-4250-a976-4abf00bdc00a.png)
+![Screenshot (220)](https://user-images.githubusercontent.com/75243072/169692105-9c8f753f-cee4-473d-9c19-7445f37213c0.png)
+![Screenshot (219)](https://user-images.githubusercontent.com/75243072/169692118-9adc3c75-e85a-479d-8709-11d488e32535.png)
 
-Justify the results for varius iterations
+
+## Solution Justification:
+When the state is larger, the longer it take to complete the search.The iteration will undergo untill the objective function reaches zero.
+
 
 ## Time Complexity Plot
 #### Plot a graph for various value of N and time(seconds)
-
+![Screenshot (222)](https://user-images.githubusercontent.com/75243072/169692447-ca244793-ed73-46f0-8af7-236f679532a3.png)
+ 
 ## RESULT:
+Hence, a code to solve eight queens problem using the hill-climbing algorithm has been implemented.
+
 
 
