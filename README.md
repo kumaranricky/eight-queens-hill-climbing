@@ -187,7 +187,9 @@ for i in n:
 ```
 ## OUTPUT:
 ![Screenshot (221)](https://user-images.githubusercontent.com/75243072/169692094-d857a74d-dfb8-4250-a976-4abf00bdc00a.png)
-![Screenshot (220)](https://user-images.githubusercontent.com/75243072/169692105-9c8f753f-cee4-473d-9c19-7445f37213c0.png)
+
+![Screenshot (220)](https://user-images.githubusercontent.com/75243072/169692105-9c8f753f-cee4-473d-9c19-7445f37213c0.png)<br>
+
 ![Screenshot (219)](https://user-images.githubusercontent.com/75243072/169692118-9adc3c75-e85a-479d-8709-11d488e32535.png)
 
 
