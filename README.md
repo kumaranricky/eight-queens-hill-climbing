@@ -196,7 +196,7 @@ When the state is larger, the longer it take to complete the search.The iteratio
 
 
 ## Time Complexity Plot
-#### Plot a graph for various value of N and time(seconds)
+#### Plotting a graph for various value of N and time(seconds)
 ![Screenshot (222)](https://user-images.githubusercontent.com/75243072/169692447-ca244793-ed73-46f0-8af7-236f679532a3.png)
  
 ## RESULT:
