@@ -1,4 +1,9 @@
-# Hill Climbing Algorithm for Eight Queens Problem
+### EXP NO: 05
+
+### DATE: 23/05/2022
+
+# <p align = "center"> Hill Climbing Algorithm for Eight Queens Problem </p>
+ 
 ## AIM
 
 To develop a code to solve eight queens problem using the hill-climbing algorithm.
@@ -40,12 +45,6 @@ from IPython.display import display
 from notebook import plot_NQueens
 
 class Problem(object):
-    """The abstract class for a formal problem. A new domain subclasses this,
-    overriding `actions` and `results`, and perhaps other methods.
-    The default heuristic is 0 and the default action cost is 1 for all states.
-    When yiou create an instance of a subclass, specify `initial`, and `goal` states 
-    (or give an `is_goal` method) and perhaps other keyword args for the subclass."""
-
     def __init__(self, initial=None, goal=None, **kwds): 
         self.__dict__.update(initial=initial, goal=goal, **kwds) 
         
@@ -63,21 +62,16 @@ class Problem(object):
             type(self).__name__, self.initial, self.goal)
 
 class Node:
-    "A Node in a search tree."
     def __init__(self, state, parent=None, action=None, path_cost=0):
         self.__dict__.update(state=state, parent=parent, action=action, path_cost=path_cost)
-
     def __str__(self): 
         return '<{0}>'.format(self.state)
     def __len__(self): 
         return 0 if self.parent is None else (1 + len(self.parent))
     def __lt__(self, other): 
         return self.path_cost < other.path_cost
-
-
 failure = Node('failure', path_cost=math.inf) # Indicates an algorithm couldn't find a solution.
 cutoff  = Node('cutoff',  path_cost=math.inf) # Indicates iterative deepening search was cut off.
-
 def expand(problem, state):
     return problem.actions(state)
 
@@ -155,8 +149,7 @@ def hill_climbing(problem,iterations = 10000):
             current.state= neighbour.state
             if problem.goal_test(current.state)==True:
                 print('The Goal state is reached at {0}'.format(i))
-                return current 
-                
+                return current              
         i += 1        
     return current 
 nq1=NQueensProblem(8)    
@@ -186,20 +179,28 @@ for i in n:
 
 ```
 ## OUTPUT:
-![Screenshot (221)](https://user-images.githubusercontent.com/75243072/169692094-d857a74d-dfb8-4250-a976-4abf00bdc00a.png)
 
-![Screenshot (220)](https://user-images.githubusercontent.com/75243072/169692105-9c8f753f-cee4-473d-9c19-7445f37213c0.png)<br>
+### Initial positions
+![Screenshot (221)](https://user-images.githubusercontent.com/75243072/175769725-885d97f6-5755-4707-b3fb-1082d687bb70.png)
 
-![Screenshot (219)](https://user-images.githubusercontent.com/75243072/169692118-9adc3c75-e85a-479d-8709-11d488e32535.png)
+### <br><br><br><br>Final positions
+![Screenshot (243)](https://user-images.githubusercontent.com/75243072/175769763-57aca1f7-7fb1-4050-96e0-a5b51a8de9bb.png)
+
+
+
+![Screenshot (239)](https://user-images.githubusercontent.com/75243072/175769751-a2e9e1cc-1ca4-4181-9b98-b0d3a7dcdfdf.png)
+
+
 
 
 ## Solution Justification:
 When the state is larger, the longer it take to complete the search.The iteration will undergo untill the objective function reaches zero.
 
 
-## Time Complexity Plot
+## <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Time Complexity Plot
+
 #### Plotting a graph for various value of N and time(seconds)
-![Screenshot (222)](https://user-images.githubusercontent.com/75243072/169692447-ca244793-ed73-46f0-8af7-236f679532a3.png)
+![Screenshot (222)](https://user-images.githubusercontent.com/75243072/175769782-9da47ffe-460c-4e22-ae72-3e087236226b.png)
  
 ## RESULT:
 Hence, a code to solve eight queens problem using the hill-climbing algorithm has been implemented.
