@@ -33,6 +33,11 @@ Display the necessary states and the time taken.
 
 
 ## PROGRAM
+```
+Developed By
+Student name : Kumaran.B
+Reg.no : 212220230026
+```
 ```python
 %matplotlib inline
 import matplotlib.pyplot as plt
@@ -188,21 +193,21 @@ for i in n:
 
 
 
-![Screenshot (239)](https://user-images.githubusercontent.com/75243072/175769751-a2e9e1cc-1ca4-4181-9b98-b0d3a7dcdfdf.png)
+<br><br><br><br>![Screenshot (239)](https://user-images.githubusercontent.com/75243072/175769751-a2e9e1cc-1ca4-4181-9b98-b0d3a7dcdfdf.png)
 
 
 
 
-## Solution Justification:
+## <br><br><br><br><br><br><br><br><br><br>Solution Justification:
 When the state is larger, the longer it take to complete the search.The iteration will undergo untill the objective function reaches zero.
 
 
-## <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>Time Complexity Plot
+## <br><br>Time Complexity Plot
 
 #### Plotting a graph for various value of N and time(seconds)
 ![Screenshot (222)](https://user-images.githubusercontent.com/75243072/175769782-9da47ffe-460c-4e22-ae72-3e087236226b.png)
  
-## RESULT:
+## <br><br><br><br><br><br><br><br><br><br><br><br>RESULT:
 Hence, a code to solve eight queens problem using the hill-climbing algorithm has been implemented.
 
 
